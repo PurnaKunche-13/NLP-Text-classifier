@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 streamlit
 scikit-learn
 pandas
 numpy
 nltk
+=======
+Streamlit
+>>>>>>> 1cc67df2fb3c49bd6f5908841f2acb74956fc4cf
