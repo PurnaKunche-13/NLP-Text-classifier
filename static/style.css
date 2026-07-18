@@ -1,0 +1,231 @@
+﻿/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0d1117;
+    color:#fff;
+}
+
+.app-shell{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    width:340px;
+    background:#23242d;
+    padding:40px 28px;
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar-title{
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:35px;
+}
+
+.features h2{
+    margin-bottom:18px;
+    font-size:1.5rem;
+}
+
+.features p{
+    margin:18px 0;
+    font-size:1.15rem;
+}
+
+.sidebar-note{
+    margin-top:40px;
+    background:#27456d;
+    color:#cfe2ff;
+    padding:22px;
+    border-radius:14px;
+    line-height:1.8;
+    font-size:1.15rem;
+}
+
+.divider{
+    height:1px;
+    background:#444;
+    margin:35px 0;
+}
+
+/* ================= MAIN ================= */
+
+.main-content{
+    flex:1;
+    padding:55px 90px;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:1.45rem;
+    color:#ddd;
+}
+
+/* ================= FORM ================= */
+
+.analysis-form{
+    margin-top:40px;
+}
+
+.analysis-form label{
+    display:block;
+    margin-bottom:12px;
+    font-weight:600;
+    font-size:1.15rem;
+}
+
+textarea{
+    width:100%;
+    background:#262730;
+    color:white;
+    border:1px solid #3d3f4b;
+    border-radius:14px;
+    padding:20px;
+    resize:vertical;
+    font-size:18px;
+    min-height:220px;
+}
+
+textarea:focus{
+    outline:none;
+    border-color:#5b9cff;
+}
+
+button{
+    margin-top:22px;
+    background:#161b22;
+    color:white;
+    border:1px solid #555;
+    padding:15px 28px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#2b313d;
+}
+
+/* ================= ALERTS ================= */
+
+.alert{
+    margin-top:30px;
+    background:#6d2b2b;
+    padding:18px;
+    border-radius:10px;
+}
+
+.success{
+    margin-top:35px;
+    background:#164b29;
+    padding:18px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+/* ================= RESULTS ================= */
+
+.result-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:35px;
+}
+
+.result-block h2{
+    margin-bottom:15px;
+}
+
+.value-box{
+    background:#1d3654;
+    padding:18px;
+    border-radius:10px;
+    color:#7fc8ff;
+    text-transform:capitalize;
+    font-size:18px;
+}
+
+/* ================= INPUT ================= */
+
+.input-preview{
+    margin-top:35px;
+}
+
+.input-preview h2{
+    margin-bottom:15px;
+}
+
+.input-preview p{
+    white-space:pre-wrap;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* ================= METRICS ================= */
+
+.metrics{
+    display:flex;
+    gap:80px;
+    margin-top:35px;
+}
+
+.metrics div{
+    display:flex;
+    flex-direction:column;
+}
+
+.metrics span{
+    color:#aaa;
+    margin-bottom:8px;
+}
+
+.metrics strong{
+    font-size:2rem;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.app-shell{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+}
+
+.main-content{
+    padding:35px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.result-grid{
+    grid-template-columns:1fr;
+}
+
+.metrics{
+    gap:30px;
+}
+}

@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app-shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h1 class="sidebar-title">📌 AI Text Analyzer</h1>
+
+        <div class="divider"></div>
+
+        <section class="features">
+            <h2>Features</h2>
+
+            <p>✅ Topic Classification</p>
+            <p>✅ Sentiment Analysis</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <div class="sidebar-note">
+            Enter any sentence, paragraph, article, or review and click
+            <strong>Analyze Text.</strong>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="hero">
+
+            <h1>🧠 AI Text Analysis</h1>
+
+            <p>
+                Analyze text to identify its
+                <strong>Topic</strong> and
+                <strong>Sentiment</strong>
+                using Machine Learning.
+            </p>
+
+        </header>
+
+        <div class="divider"></div>
+
+        <!-- Form -->
+        <form method="POST" class="analysis-form">
+
+            <label for="text">✍️ Enter your text</label>
+
+            <textarea
+                id="text"
+                name="text"
+                rows="8"
+                placeholder="Example:
+I love playing football with my friends every weekend..."
+            >{{ user_input }}</textarea>
+
+            <button type="submit">
+                🚀 Analyze
+            </button>
+
+        </form>
+
+        <!-- Error -->
+        {% if error %}
+        <div class="alert">
+            ⚠️ {{ error }}
+        </div>
+        {% endif %}
+
+        <!-- Results -->
+        {% if result %}
+
+        <div class="success">
+            ✅ Analysis Completed
+        </div>
+
+        <section class="result-grid">
+
+            <div class="result-block">
+                <h2>📚 Topic</h2>
+
+                <div class="value-box">
+                    {{ result.topic }}
+                </div>
+            </div>
+
+            <div class="result-block">
+                <h2>😊 Sentiment</h2>
+
+                <div class="value-box">
+                    {{ result.sentiment }}
+                </div>
+            </div>
+
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Input Preview -->
+        <section class="input-preview">
+
+            <h2>📝 Input Text</h2>
+
+            <p>{{ user_input }}</p>
+
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Metrics -->
+        <section class="metrics">
+
+            <div class="metric-card">
+                <span>Characters</span>
+                <strong>{{ result.characters }}</strong>
+            </div>
+
+            <div class="metric-card">
+                <span>Words</span>
+                <strong>{{ result.words }}</strong>
+            </div>
+
+        </section>
+
+        {% endif %}
+
+    </main>
+
+</div>
+
+</body>
+</html>
